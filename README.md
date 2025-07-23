@@ -82,11 +82,15 @@ Error %: Displays the percentage of failed requests.
 
 📷 Sample Report Screenshot:
 
+## 📸 Screenshots from JMeter Report
 
-📸 8. Screenshots
-JMeter Test Plan Design
+<p align="center">
+  <img src="screenshots/summary.png" width="700" />
+  <img src="screenshots/response-times.png" width="700" />
+  <img src="screenshots/3.png" width="700" />
+  <img src="screenshots/4.png" width="700" />
+</p>
 
-Generated HTML Report
 
 🚀 9. Future Enhancements
 Add CSV Data Set Config for dynamic user data.
