@@ -1,0 +1,2 @@
+1--D:\Courses\Performance Testing\Projects\test-results.jtl
+2--jmeter -g "D:\Courses\Performance Testing\Projects\test-results.jtl" -o "D:\Courses\Performance Testing\Projects\report"
