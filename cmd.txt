@@ -1,2 +1,10 @@
 1--D:\Courses\Performance Testing\Projects\test-results.jtl
 2--jmeter -g "D:\Courses\Performance Testing\Projects\test-results.jtl" -o "D:\Courses\Performance Testing\Projects\report"
+3-git add .
+4-git commit -m "Add HTML report and final test results"
+5-git push origin master--git push origin main
+Readme ----
+-git add README.md
+git commit -m "Enhanced README with project details"
+git push origin master
+
