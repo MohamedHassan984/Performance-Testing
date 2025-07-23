@@ -1,32 +1,41 @@
-# 🧪 Web Tours Performance Testing using Apache JMeter
+# 🧪 Performance Evaluation of Web Tours Application using Apache JMeter
 
-This project performs a performance evaluation for the **Web Tours** application using **Apache JMeter 5.6.3**.
+## 📌 1. Project Overview
 
----
-
-## 📋 Overview
-
-The goal of this project is to assess the performance and stability of the Web Tours application under various user loads. The test plan simulates multiple virtual users accessing the website to analyze system behavior in terms of response time, throughput, and error rates.
+This project demonstrates performance testing for the **Web Tours** application using **Apache JMeter**. The goal is to simulate real-world user traffic and assess the system’s performance under various load conditions.
 
 ---
 
-## 🛠 Tools Used
+## 🧰 2. Tools & Technologies Used
 
 - Apache JMeter 5.6.3
-- .JMX Test Plan
-- JTL Result File
 - HTML Report Generation
-- Windows Command Line
+- Git & GitHub for version control
+- Windows OS
 
 ---
 
-## 📂 Project Structure
+## 🎯 3. Objectives
 
-├── webtours-performance-test.jmx # JMeter test plan
-├── test-results.jtl # Result file after test execution
-├── report/ # Auto-generated HTML report
-├── screenshots/ # (Optional) Screenshots from report
-└── README.md # Project documentation
+1. Simulate multiple users accessing the application.
+2. Measure system behavior under load.
+3. Analyze performance metrics including:
+   - Response Time
+   - Throughput
+   - Error Rate
+4. Generate detailed performance reports.
+
+---
+
+## 📂 4. Project Structure
+
+📁 apache-jmeter-5.6.3
+📁 Projects
+│ ├── WebToursTestPlan.jmx
+│ ├── test-results.jtl
+│ ├── report/
+│ │ └── index.html (Generated HTML report)
+│ └── README.md
 
 yaml
 Copy
@@ -34,64 +43,70 @@ Edit
 
 ---
 
-## ▶️ How to Run the Test
+## 🧪 5. Test Plan Scenario
 
-1. Open Apache JMeter.
-2. Load the file `webtours-performance-test.jmx`.
-3. Run the test and export the results to a `.jtl` file.
-4. Generate an HTML report using the command:
+The JMeter test plan simulates the following user actions:
 
-jmeter -g test-results.jtl -o report/
+1. Open the Web Tours homepage.
+2. Login with valid credentials.
+3. Search for flights.
+4. Book a selected flight.
+5. Logout.
 
-yaml
+Each of these steps is implemented using HTTP requests inside a Thread Group.
+
+---
+
+## ⚙️ 6. Execution Steps
+
+1. Open a command prompt and navigate to the JMeter `bin` directory.
+2. Run the test plan in **Non-GUI Mode** using the command:
+   ```bash
+   jmeter -n -t "D:\Courses\Performance Testing\Projects\WebToursTestPlan.jmx" -l "D:\Courses\Performance Testing\Projects\test-results.jtl"
+Generate HTML report:
+
+bash
 Copy
 Edit
+jmeter -g "D:\Courses\Performance Testing\Projects\test-results.jtl" -o "D:\Courses\Performance Testing\Projects\report"
+📊 7. Result Analysis
+The generated HTML report includes:
 
-5. Open `report/index.html` in your browser to view the full performance report.
+Summary Dashboard: Overview of total requests, average response time, throughput, and errors.
 
----
+Response Time Over Time: Visualization of how response time changes during test.
 
-## 📈 Sample Report (Optional)
+Active Threads Over Time: Tracks how many virtual users were active.
 
-You can include screenshots inside the `screenshots/` folder.  
-For example:
+Error %: Displays the percentage of failed requests.
 
-![Report Summary](screenshots/report-summary.png)
+📷 Sample Report Screenshot:
 
----
 
-## ✅ Summary
+📸 8. Screenshots
+JMeter Test Plan Design
 
-| Metric                 | Value          |
-|------------------------|----------------|
-| Avg. Response Time     | ~ **X ms**     |
-| Throughput             | ~ **X req/sec**|
-| Error Percentage       | **0%** (or as per result) |
-| Number of Threads      | **50** (Example) |
-| Duration               | **2 minutes** (Example) |
+Generated HTML Report
 
-> Replace the `X` values with actual data from your report if needed.
+🚀 9. Future Enhancements
+Add CSV Data Set Config for dynamic user data.
 
----
+Simulate random user behaviors with timers.
 
-## 📌 Recommendations
+Integrate JMeter with CI/CD tools like Jenkins.
 
-- Monitor server-side performance while running the test.
-- Optimize slow transactions that show high response time.
-- Re-run the test after fixes and compare metrics.
+Run distributed performance tests using JMeter server-agent model.
 
----
+👨‍💻 10. Author
+Mohamed Hassan
 
-## 👨‍💻 Author
+📧 Email: mh8860157@gmail.com
 
-**Mohamed Hassan**  
-Software Testing Engineer  
-📧 mh8860157@gmail.com  
-📞 01110460414  
-[LinkedIn Profile](https://www.linkedin.com/in/mohamed-hassan-497307330)
+📞 Phone: 01110460414
 
----
+💼 LinkedIn: Mohamed Hassan
 
-## 🗂️ Tags
+💻 GitHub: MohamedHassan984
 
-`#PerformanceTesting` `#JMeter` `#WebTours` `#SoftwareTesting` `#LoadTest`
+📁 11. Repository Link
+GitHub Repo: https://github.com/MohamedHassan984/Performance-Testing
